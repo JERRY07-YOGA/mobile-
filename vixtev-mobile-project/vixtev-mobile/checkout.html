@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Place an order with COD or UPI-ready checkout on Vixtev Mobile.">
+  <title>Checkout | Vixtev Mobile</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <div data-site-header></div>
+
+  <main>
+    <section class="page-hero page-hero--checkout">
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="eyebrow">Checkout</span>
+          <h1>Address, Payment, and Order Review</h1>
+          <p>A realistic checkout flow with COD, payment selection, and a polished success animation when the order is placed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container checkout-layout">
+        <form class="checkout-form" id="checkout-form">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Delivery Address</h2>
+              <span>Saved locally for demo flow</span>
+            </div>
+            <div class="form-grid">
+              <label>
+                Full Name
+                <input class="input-field" type="text" name="fullName" placeholder="Your full name" required>
+              </label>
+              <label>
+                Mobile Number
+                <input class="input-field" type="tel" name="phone" placeholder="10-digit mobile number" required>
+              </label>
+              <label class="form-grid__wide">
+                Street Address
+                <input class="input-field" type="text" name="address" placeholder="House no, street, landmark" required>
+              </label>
+              <label>
+                City
+                <input class="input-field" type="text" name="city" placeholder="City" required>
+              </label>
+              <label>
+                State
+                <input class="input-field" type="text" name="state" placeholder="State" required>
+              </label>
+              <label>
+                Pincode
+                <input class="input-field" type="text" name="pincode" placeholder="Pincode" required>
+              </label>
+              <label>
+                Email
+                <input class="input-field" type="email" name="email" placeholder="Email for updates" required>
+              </label>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Payment Method</h2>
+              <span>Demo methods for a frontend-only build</span>
+            </div>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                <span>
+                  <strong>Cash on Delivery</strong>
+                  <small>Pay when your order arrives</small>
+                </span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="UPI">
+                <span>
+                  <strong>UPI</strong>
+                  <small>Secure instant payment</small>
+                </span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Card">
+                <span>
+                  <strong>Debit / Credit Card</strong>
+                  <small>Fast card checkout</small>
+                </span>
+              </label>
+            </div>
+            <div class="payment-strip">
+              <img src="assets/images/payment-badges.svg" alt="Accepted payment methods">
+            </div>
+          </div>
+        </form>
+
+        <aside class="checkout-summary" data-checkout-summary></aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/catalog-fallback.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

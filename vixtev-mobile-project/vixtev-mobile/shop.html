@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore chargers, earbuds, cases, smartwatches, speakers, and power banks from Vixtev Mobile.">
+  <title>Shop | Vixtev Mobile</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <div data-site-header></div>
+
+  <main>
+    <section class="page-hero page-hero--shop">
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="eyebrow">Full Catalogue</span>
+          <h1>Shop Mobile Accessories That Actually Feel Premium</h1>
+          <p>Filter by category, search in real time, and explore fast-moving products with realistic pricing, ratings, and stock labels.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container shop-layout">
+        <aside class="filter-panel">
+          <div class="filter-card">
+            <div class="filter-title">
+              <h3>Search Store</h3>
+            </div>
+            <input id="shop-search" class="input-field" type="search" placeholder="Search for earbuds, charger, cases...">
+          </div>
+
+          <form class="filter-card" id="shop-filter-form">
+            <div class="filter-title">
+              <h3>Categories</h3>
+              <button class="text-link" type="button" data-clear-filters>Clear</button>
+            </div>
+            <label class="filter-option"><input type="radio" name="category" value="All" checked> All Accessories</label>
+            <label class="filter-option"><input type="radio" name="category" value="Chargers"> Chargers</label>
+            <label class="filter-option"><input type="radio" name="category" value="Earbuds"> Earbuds</label>
+            <label class="filter-option"><input type="radio" name="category" value="Smartwatches"> Smartwatches</label>
+            <label class="filter-option"><input type="radio" name="category" value="Phone Cases"> Phone Cases</label>
+            <label class="filter-option"><input type="radio" name="category" value="Power Banks"> Power Banks</label>
+            <label class="filter-option"><input type="radio" name="category" value="Bluetooth Speakers"> Bluetooth Speakers</label>
+
+            <div class="filter-divider"></div>
+
+            <div class="filter-title">
+              <h3>Price Range</h3>
+            </div>
+            <label class="filter-option"><input type="radio" name="priceRange" value="all" checked> All prices</label>
+            <label class="filter-option"><input type="radio" name="priceRange" value="under999"> Under ₹999</label>
+            <label class="filter-option"><input type="radio" name="priceRange" value="1000-1999"> ₹1,000 to ₹1,999</label>
+            <label class="filter-option"><input type="radio" name="priceRange" value="2000plus"> ₹2,000 and above</label>
+
+            <div class="filter-divider"></div>
+
+            <div class="filter-title">
+              <h3>Extras</h3>
+            </div>
+            <label class="filter-option"><input type="checkbox" name="featuredOnly" value="1"> Featured picks only</label>
+            <label class="filter-option"><input type="checkbox" name="fewLeft" value="1"> Only few left</label>
+            <label class="filter-option"><input type="checkbox" name="flashSale" value="1"> Flash sale products</label>
+          </form>
+
+          <div class="filter-card filter-card--accent">
+            <span class="eyebrow">Store Promise</span>
+            <h3>Free delivery above ₹999</h3>
+            <p>COD, fast local dispatch, and WhatsApp support from the same team that helps in-store buyers.</p>
+          </div>
+        </aside>
+
+        <div class="shop-results">
+          <div class="results-toolbar">
+            <div>
+              <p class="results-label">Showing <strong data-results-count>0</strong> products</p>
+              <div class="active-filters" data-active-filters></div>
+            </div>
+            <div class="toolbar-actions">
+              <select id="shop-sort" class="input-field input-field--select">
+                <option value="featured">Sort: Featured</option>
+                <option value="priceLow">Price: Low to High</option>
+                <option value="priceHigh">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+                <option value="discount">Biggest Discount</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-grid" data-shop-grid></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/catalog-fallback.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
